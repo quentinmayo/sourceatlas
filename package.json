@@ -1,0 +1,52 @@
+{
+  "name": "sourceatlas",
+  "version": "0.1.0",
+  "description": "Open-source code-to-cloud asset inventory. Trace source, Dockerfiles, immutable images, and runtime workloads.",
+  "scripts": {
+    "dev": "vite",
+    "api": "tsx --env-file-if-exists=.env src/server/index.ts",
+    "demo": "DEMO_MODE=true tsx src/server/index.ts",
+    "build": "tsc --noEmit && tsc -p tsconfig.server.json && vite build",
+    "start": "tsx --env-file-if-exists=.env src/server/index.ts",
+    "collect": "tsx --env-file-if-exists=.env src/collectors/cli.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "test:e2e": "playwright test",
+    "test:neo4j": "NEO4J_TEST=true tsx --test tests/neo4j.test.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [],
+  "author": "Quentin Mayo",
+  "license": "Apache-2.0",
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-ecr": "^3.1148.0",
+    "@aws-sdk/client-ecs": "^3.1148.0",
+    "graphql": "^17.0.2",
+    "graphql-yoga": "^5.24.4",
+    "lucide-react": "^1.54.0",
+    "neo4j-driver": "^6.2.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quentinmayo/sourceatlas.git"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

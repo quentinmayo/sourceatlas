@@ -1,0 +1,17 @@
+{
+  "scope": "ci:example/payments-api",
+  "kind": "BUILD",
+  "observedAt": "2026-01-01T00:00:00.000Z",
+  "builds": [
+    {
+      "repository": "https://github.com/example/payments-api",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "dockerfile": "Dockerfile",
+      "image": "123456789012.dkr.ecr.us-east-1.amazonaws.com/payments-api",
+      "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "owner": "commerce",
+      "buildUrl": "https://github.com/example/payments-api/actions/runs/100",
+      "observedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ]
+}
